@@ -38,6 +38,7 @@
 .main-content {
     @include header-font;
     h2 {
+        @include regular-font;
         font-size: 8vw;
     }
 }
