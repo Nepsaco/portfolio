@@ -1,43 +1,67 @@
 <template>
-  <div id="app">
-      <header class='main-header'>
-          <h1>Hello</h1>
-      </header>
-      <nav class='main-nav'>
-          <p>Hamburger</p>
-      </nav>
-      <footer class='main-footer'>
-          <p>about</p>
-          <p>work</p>
-          <p>contact</p>
-      </footer>
-  </div>
+    <div id="app">
+        <section class='landing'>
+            <header class='main-header'>
+                <h1>Software Developer</h1>
+            </header>
+            <nav class='main-nav'>
+                <p>Hamburger</p>
+            </nav>
+            <main>
+                <h1>hello</h1>
+            </main>
+            <footer class='main-footer'>
+                <ul>
+                    <li>about</li>/
+                    <li>work</li>/
+                    <li>contact</li>
+                </ul>
+            </footer>
+        </section>
+    </div>
 </template>
 
 <script>
+export default {
+
+}
 </script>
 
 <style lang="scss">
 @import './styles/reset';
+@import './styles/typography';
 @import './styles/color';
+
 body {
+    @include regular-font;
+}
+.landing {
     display: flex;
-    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     background-color: $dark;
-    align-content: space-between;
     color: $light;
+    padding: 2rem;
+}
+.main-header {
+    color: $accent;
 }
 
 nav {
-    position: fixed;
-    left: 5%;
-    top: 5%;
-    width: 8em;
-    margin-top: -2.5em;
+    position: absolute;
+    left: 2rem;
+    top: 2rem;
+    width: 8rem;
 }
 
-footer {
-    position: absolute;
-    bottom: 0;
+.main-footer {
+    color: $accent;
+    width: 100vw;
+    ul {
+        display: flex;
+        justify-content: space-evenly;
+    }
 }
 </style>
