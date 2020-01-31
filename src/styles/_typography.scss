@@ -1,4 +1,18 @@
 @import url("https://use.typekit.net/ydq0zca.css");
+// @font-face {
+//     font-family: 'Mistuki';
+//     src: url('../assets/fonts/Mistuki.ttf')format('truetype');
+// }
+
+@font-face {
+    font-family: 'Mistuki';
+    src: url('fonts/Mistuki-Bold.ttf')format('truetype');
+}
+
+// @mixin header-font {
+//     font-family: 'Mistuki', 'Arial Black', sans-serif;
+//     font-size: 25vw;
+// }
 
 @mixin bold-font {
     font-family: proxima-nova, sans-serif;
