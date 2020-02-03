@@ -1,11 +1,6 @@
 <template>
     <section class='landing'>
-        <header class='main-header'>
-            <h1>Software Developer</h1>
-        </header>
-        <nav class='main-nav'>
-            <p>Hamburger</p>
-        </nav>
+        <Header />
         <main class='main-content'>
             <h1>Tobie Tsuzuki</h1>
             <h2>I'm a 
@@ -15,23 +10,27 @@
                     <span>Designer.</span>
                     <span>Climber.</span>
                     <span>Front-end Engineer.</span>
-                    <span>Foodie.</span>
                     <span>Tech Nerd.</span>
                     <span>Back-end Engineer</span>
+                    <span>Foodie.</span>
                 </div>
             </h2>
         </main>
-        <footer class='main-footer'>
-            <ul>
-                <li>about</li>/
-                <li>work</li>/
-                <li>contact</li>
-            </ul>
-        </footer>
+        <Footer />
     </section>
 </template>
 
 <script>
+import Footer from '@/components/Footer.vue'
+import Header from '@/components/Header.vue'
+
+export default {
+    components: {
+        Footer,
+        Header,
+    }
+
+}
 </script>
 
 <style lang='scss'>
@@ -68,11 +67,9 @@
         &:nth-child(2){
             animation-delay: 2.5s;
         }
-
         &:nth-child(3){
             animation-delay: 5s;
         }
-
         &:nth-child(4){
             animation-delay: 7.5s;
         }
@@ -111,26 +108,6 @@
     }
     100% {
         opacity: 0;
-    }
-}
-
-.main-header {
-    color: $accent;
-}
-
-nav {
-    position: absolute;
-    left: 2rem;
-    top: 2rem;
-    width: 8rem;
-}
-
-.main-footer {
-    color: $accent;
-    width: 100vw;
-    ul {
-        display: flex;
-        justify-content: space-evenly;
     }
 }
 </style>
