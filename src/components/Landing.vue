@@ -8,7 +8,18 @@
         </nav>
         <main class='main-content'>
             <h1>Tobie Tsuzuki</h1>
-            <h2>I'M A </h2>
+            <h2>I'm a 
+                <div class='slider'>
+                    <span>Software Developer.</span>
+                    <span>Skier.</span>
+                    <span>Designer.</span>
+                    <span>Climber.</span>
+                    <span>Front-end Engineer.</span>
+                    <span>Foodie.</span>
+                    <span>Tech Nerd.</span>
+                    <span>Back-end Engineer</span>
+                </div>
+            </h2>
         </main>
         <footer class='main-footer'>
             <ul>
@@ -40,6 +51,66 @@
     h2 {
         @include regular-font;
         font-size: 8vw;
+    }
+}
+
+.slider {
+    display: inline;
+
+    span {
+        color: $accent;
+        animation: topToBottom 20s linear infinite 0s;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        text-indent: 1rem;
+
+        &:nth-child(2){
+            animation-delay: 2.5s;
+        }
+
+        &:nth-child(3){
+            animation-delay: 5s;
+        }
+
+        &:nth-child(4){
+            animation-delay: 7.5s;
+        }
+        &:nth-child(5){
+            animation-delay: 10s;
+        }
+        &:nth-child(6){
+            animation-delay: 12.5s;
+        }
+        &:nth-child(7){
+            animation-delay: 15s;
+        }
+        &:nth-child(8){
+            animation-delay: 17.5s;
+        }
+    }
+}
+
+@keyframes topToBottom {
+    0% { opacity: 0; }
+    15% { 
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    20% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    25% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    30% {
+        opacity: 0;
+        transform: translateY(75px);
+    }
+    100% {
+        opacity: 0;
     }
 }
 

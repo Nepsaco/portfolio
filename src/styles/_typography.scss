@@ -4,14 +4,14 @@
     src: url('~@/assets/fonts/Mistuki.ttf')format('truetype');
 }
 
-@font-face {
-    font-family: 'Mistuki';
-    src: url('~@/assets/fonts/Mistuki-Bold.ttf')format('truetype');
-}
+// @font-face {
+//     font-family: 'Mistuki-bold';
+//     src: url('~@/assets/fonts/Mistuki-Bold.ttf')format('truetype');
+// }
 
 @mixin header-font {
     font-family: 'Mistuki', 'Arial Black', sans-serif;
-    font-size: 25vw;
+    font-size: 20vw;
 }
 
 @mixin bold-font {
