@@ -1,15 +1,18 @@
 <template>
     <div id="app">
         <Landing />
+        <About />
     </div>
 </template>
 
 <script>
-import Landing from '@/components/Landing.vue'
+import Landing from '@/views/Landing.vue'
+import About from '@/views/About.vue'
 
 export default {
     components: {
-        Landing
+        Landing,
+        About,
     }
 
 }

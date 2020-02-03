@@ -28,8 +28,7 @@ export default {
     components: {
         Footer,
         Header,
-    }
-
+    },
 }
 </script>
 
@@ -48,8 +47,12 @@ export default {
 .main-content {
     @include header-font;
     h2 {
+        padding-top: 1rem;
         @include regular-font;
-        font-size: 8vw;
+        font-size: 6vw;
+        @include respond-to(desktop) {
+            font-size: 7vw; 
+        }
     }
 }
 
@@ -58,32 +61,32 @@ export default {
 
     span {
         color: $accent;
-        animation: topToBottom 20s linear infinite 0s;
+        animation: topToBottom 16s linear infinite 0s;
         opacity: 0;
         overflow: hidden;
         position: absolute;
         text-indent: 1rem;
 
         &:nth-child(2){
-            animation-delay: 2.5s;
+            animation-delay: 2s;
         }
         &:nth-child(3){
-            animation-delay: 5s;
+            animation-delay: 4s;
         }
         &:nth-child(4){
-            animation-delay: 7.5s;
+            animation-delay: 6s;
         }
         &:nth-child(5){
-            animation-delay: 10s;
+            animation-delay: 8s;
         }
         &:nth-child(6){
-            animation-delay: 12.5s;
+            animation-delay: 10s;
         }
         &:nth-child(7){
-            animation-delay: 15s;
+            animation-delay: 12s;
         }
         &:nth-child(8){
-            animation-delay: 17.5s;
+            animation-delay: 14s;
         }
     }
 }
@@ -92,7 +95,7 @@ export default {
     0% { opacity: 0; }
     15% { 
         opacity: 0;
-        transform: translateY(-20px);
+        transform: translateY(-2rem);
     }
     20% {
         opacity: 1;
@@ -104,7 +107,7 @@ export default {
     }
     30% {
         opacity: 0;
-        transform: translateY(75px);
+        transform: translateY(4rem);
     }
     100% {
         opacity: 0;
