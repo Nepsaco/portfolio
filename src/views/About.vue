@@ -4,7 +4,13 @@
             <h1>About</h1>
         </div>
         <div class='about-content'>
-            <h1>Hello</h1>
+            <h2>I am a Software Developer living in Denver, Colorado.</h2>
+            <p>A former beer brewer turned engineer. I aspire to create web apps that achieve beautiful design and memorable UX.</p>
+            <ul>
+                <li>Front-end Development</li>
+                <li>Back-end Development</li>
+                <li>UI/UX Design</li>
+            </ul>
         </div>
     </section>
 </template>
@@ -39,8 +45,8 @@
     background-color: $light;
     height: 100vh;
     padding: 2rem;
-    h1 {
-        color: $dark;
+    color: $dark;
+    h2 {
         @include bold-font;
     }
     @include respond-to(desktop){
