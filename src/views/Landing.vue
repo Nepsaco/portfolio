@@ -11,7 +11,7 @@
                     <span>Climber.</span>
                     <span>Front-end Engineer.</span>
                     <span>Tech Nerd.</span>
-                    <span>Back-end Engineer</span>
+                    <span>Back-end Engineer.</span>
                     <span>Foodie.</span>
                 </div>
             </h2>

@@ -1,16 +1,9 @@
 <template>
-    <section class='about'>
-        <div class='about-title'>
-            <h1>About</h1>
+    <section class='work'>
+        <div class='work-title'>
+            <h1>Work</h1>
         </div>
-        <div class='about-content'>
-            <h2>I am a Software Developer living in Denver, Colorado.</h2>
-            <p>A former beer brewer turned engineer. I aspire to create web apps that achieve beautiful design and memorable UX.</p>
-            <ul>
-                <li>Front-end Development</li>
-                <li>Back-end Development</li>
-                <li>UI/UX Design</li>
-            </ul>
+        <div class='work-content'>
         </div>
     </section>
 </template>
@@ -19,7 +12,7 @@
 </script>
 
 <style lang='scss'>
-.about {
+.work {
     display: flex;
     flex-flow: column wrap;
     background-color: $accent;
@@ -29,7 +22,9 @@
     }
 }
 
-.about-title {
+.work-title {
+    color: $dark;
+    background-color: $light;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,7 +36,8 @@
     }
 }
 
-.about-content {
+
+.work-content {
     background-color: $light;
     height: 100vh;
     padding: 2rem;
