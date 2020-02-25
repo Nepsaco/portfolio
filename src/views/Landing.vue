@@ -45,13 +45,19 @@ export default {
 }
 
 .main-content {
-    @include header-font;
-    h2 {
-        padding-top: 1rem;
-        @include regular-font;
-        font-size: 6vw;
+    h1 {
+        @include header-font;
+        font-size: $XXL;
         @include respond-to(desktop) {
-            font-size: 7vw; 
+            font-size: $XXXL;
+        }
+    }
+    h2 {
+        padding-top: 1em;
+        @include regular-font;
+        font-size: $L;
+        @include respond-to(desktop) {
+            font-size: $XL;
         }
     }
 }
@@ -65,7 +71,7 @@ export default {
         opacity: 0;
         overflow: hidden;
         position: absolute;
-        text-indent: 1rem;
+        margin-left: 1rem;
 
         &:nth-child(2){
             animation-delay: 2s;

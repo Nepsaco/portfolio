@@ -22,12 +22,5 @@ export default {
     color: $accent;
 }
 
-nav {
-    position: absolute;
-    left: 2rem;
-    top: 2rem;
-    width: 8rem;
-}
-
 </style>
 

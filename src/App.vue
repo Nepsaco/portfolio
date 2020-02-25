@@ -3,6 +3,7 @@
         <Landing />
         <About />
         <Work />
+        <Contact />
     </div>
 </template>
 
@@ -10,12 +11,14 @@
 import Landing from '@/views/Landing.vue'
 import About from '@/views/About.vue'
 import Work from '@/views/Work.vue'
+import Contact from '@/views/Contact.vue'
 
 export default {
     components: {
         Landing,
         About,
         Work,
+        Contact,
     }
 
 }
