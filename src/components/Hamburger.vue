@@ -19,7 +19,6 @@ export default {
 
     methods: {
         toggleActive: function() {
-            console.log(this.isActive)
             this.isActive = !this.isActive
         }
     }
@@ -34,7 +33,7 @@ export default {
         display: block;
         position: absolute;
         height: 12%;
-        width: 50%;
+        width: 50% ;
         background: $light;
         opacity: 1;
         transform: rotate(0deg);
