@@ -17,10 +17,9 @@ export default {
 <style lang='scss'>
 
 nav {
-    position: absolute;
+    position: fixed;
     left: 2rem;
     top: 2rem;
-    width: $XL;
 }
 
 </style>

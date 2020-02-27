@@ -1,5 +1,5 @@
 <template>
-    <div id='hamburger-container' v-on:click='toggleActive'>
+    <div id='hamburger-container' v-bind:class ="{active: isActive}" @click='toggleActive()'>
         <span></span>
         <span></span>
         <span></span>
@@ -10,19 +10,30 @@
 </template>
 
 <script>
+export default {
+    data() {
+        return{
+            isActive: false,
+        }
+    },
+
     methods: {
-        toggleActive: function(event) {
-        alert('hello')
+        toggleActive: function() {
+            console.log(this.isActive)
+            this.isActive = !this.isActive
         }
     }
+}
 </script>
 
 <style lang='scss'>
 #hamburger-container {
+    width: 2rem;
+    height: 2rem;
     span {
         display: block;
         position: absolute;
-        height: 9px;
+        height: 12%;
         width: 50%;
         background: $light;
         opacity: 1;
@@ -31,12 +42,12 @@
 
         &:nth-child(even){
             left: 50%;
-            border-radius: 0 9px 9px 0;
+            border-radius: 0 10px 10px 0;
         }
 
         &:nth-child(odd){
             left: 0px;
-            border-radius: 9px 0 0 9px;
+            border-radius: 10px 0 0 10px;
         }
 
         &:nth-child(1), &:nth-child(2) {
@@ -44,11 +55,11 @@
         }
 
         &:nth-child(3), &:nth-child(4) {
-            top: 18px;
+            top: .5rem;
         }
 
         &:nth-child(5), &:nth-child(6) {
-            top: 36px;
+            top: 1rem;
         }
     }
 
@@ -63,32 +74,33 @@
             }
 
             &:nth-child(1) {
-                left: 5px;
-                top: 7px;
+                top: 15%;
+                left: 5%;
             }
 
             &:nth-child(2) {
-                left: calc(50% - 5px);
-                top: 7px;
+                top: 15%;
+                left: 35%;
+            }
+
+
+            &:nth-child(5) {
+                top: 45%;
+                left: 5%;
             }
 
             &:nth-child(6) {
-                left: calc(50% - 5px);
-                top: 29px;
-            }
-
-            &:nth-child(5) {
-                left: 5px;
-                top: 29px;
+                top: 45%;
+                left: 35%;
             }
 
             &:nth-child(3){
-                left: -50%;
+                left: -25%;
                 opacity: 0;
             }
 
             &:nth-child(4){
-                left: 100%;
+                left: 75%;
                 opacity: 0;
             }
 
