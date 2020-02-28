@@ -1,11 +1,13 @@
 <template>
-    <div id='hamburger-container' v-bind:class ="{active: isActive}" @click='toggleActive()'>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+    <div class='hexagon'>
+        <div id='hamburger-container' v-bind:class ="{active: isActive}" @click='toggleActive()'>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
 </template>
 
@@ -26,83 +28,113 @@ export default {
 </script>
 
 <style lang='scss'>
-#hamburger-container {
-    width: 2rem;
-    height: 2rem;
-    span {
-        display: block;
+.hexagon {
+    position: relative;
+    width: 60px;
+    height: 34.641px;
+    background-color: $accent;
+    padding-top: 7.32px;
+
+    &:before, &:after {
+        content: "";
         position: absolute;
-        height: 12%;
-        width: 50% ;
-        background: $light;
-        opacity: 1;
-        transform: rotate(0deg);
-        transition: .25s ease-in-out;
-
-        &:nth-child(even){
-            left: 50%;
-            border-radius: 0 10px 10px 0;
-        }
-
-        &:nth-child(odd){
-            left: 0px;
-            border-radius: 10px 0 0 10px;
-        }
-
-        &:nth-child(1), &:nth-child(2) {
-            top: 0;
-        }
-
-        &:nth-child(3), &:nth-child(4) {
-            top: .5rem;
-        }
-
-        &:nth-child(5), &:nth-child(6) {
-            top: 1rem;
-        }
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
     }
 
-    &.active {
+    &:before {
+        bottom: 100%;
+        border-bottom: 17.32px solid $accent;
+    }
+
+    &:after {
+        top: 100%;
+        width: 0;
+        border-top: 17.32px solid $accent;
+
+    }
+
+    #hamburger-container {
+        position: relative;
+        margin: auto;
+        width: 30px;
+        height: 20px;
+
         span {
-            &:nth-child(1), &:nth-child(6){
-                transform: rotate(45deg);
+            display: block;
+            position: absolute;
+            height: 4px;
+            width: 50%;
+            background: $light;
+            opacity: 1;
+            transform: rotate(0deg);
+            transition: .25s ease-in-out;
+
+            &:nth-child(even){
+                left: 50%;
+                border-radius: 0 10px 10px 0;
             }
 
-            &:nth-child(2), &:nth-child(5){
-                transform: rotate(-45deg);
+            &:nth-child(odd){
+                left: 0px;
+                border-radius: 10px 0 0 10px;
             }
 
-            &:nth-child(1) {
-                top: 15%;
-                left: 5%;
+            &:nth-child(1), &:nth-child(2) {
+                top: 0;
             }
 
-            &:nth-child(2) {
-                top: 15%;
-                left: 35%;
+            &:nth-child(3), &:nth-child(4) {
+                top: 8px;
             }
 
-
-            &:nth-child(5) {
-                top: 45%;
-                left: 5%;
+            &:nth-child(5), &:nth-child(6) {
+                top: 16px;
             }
+        }
 
-            &:nth-child(6) {
-                top: 45%;
-                left: 35%;
+        &.active {
+            span {
+                &:nth-child(1), &:nth-child(6){
+                    transform: rotate(45deg);
+                }
+
+                &:nth-child(2), &:nth-child(5){
+                    transform: rotate(-45deg);
+                }
+
+                &:nth-child(1) {
+                    top: 4px;
+                    left: 3px;
+                }
+
+                &:nth-child(2) {
+                    top: 4px;
+                    left: calc(50% - 3px);
+                }
+
+
+                &:nth-child(5) {
+                    left: 3px;
+                    top: 14px;
+                }
+
+                &:nth-child(6) {
+                    left: calc(50% - 3px);
+                    top: 14px;
+                }
+
+                &:nth-child(3){
+                    left: -25%;
+                    opacity: 0;
+                }
+
+                &:nth-child(4){
+                    left: 75%;
+                    opacity: 0;
+                }
+
             }
-
-            &:nth-child(3){
-                left: -25%;
-                opacity: 0;
-            }
-
-            &:nth-child(4){
-                left: 75%;
-                opacity: 0;
-            }
-
         }
     }
 }
