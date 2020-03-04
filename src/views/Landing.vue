@@ -4,7 +4,7 @@
         <main class='main-content'>
             <h1>Tobie Tsuzuki</h1>
             <h2>I'm a 
-                <div class='slider'>
+                <div class='text-slider'>
                     <span>Software Developer.</span>
                     <span>Skier.</span>
                     <span>Designer.</span>
@@ -62,7 +62,7 @@ export default {
     }
 }
 
-.slider {
+.text-slider {
     display: inline;
 
     span {

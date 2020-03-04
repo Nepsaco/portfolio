@@ -1,32 +1,37 @@
 <template>
     <div id="app">
-        <Landing />
-        <About />
-        <Work />
-        <Contact />
+        <router-view name='Landing' ref='landing'/> 
+        <router-view name='About' ref='about'/> 
+        <router-view name='Work' ref='work'/> 
+        <router-view name='Contact' ref='contact'/> 
     </div>
 </template>
 
 <script>
-import Landing from '@/views/Landing.vue'
-import About from '@/views/About.vue'
-import Work from '@/views/Work.vue'
-import Contact from '@/views/Contact.vue'
 
 export default {
-    components: {
-        Landing,
-        About,
-        Work,
-        Contact,
+    data() {
+        return {
+            inMove: false,
+            acticeSection: 0,
+            offsets: [],
+            touchStartY: 0
+        }
+    },
+    methods: {
+        getOffsets(){
+            console.log(this.$refs.landing.$el.offsetTop)
+        }
+    },
+    mounted(){
+        return this.getOffsets()
     }
-
 }
 </script>
 
 <style lang="scss">
 
-body {
+#app {
     @include regular-font;
 }
 

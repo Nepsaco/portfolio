@@ -1,5 +1,5 @@
 $break-handheld: 480px;
-$break-desktop: 1000px;
+$break-desktop: 1080px;
 
 @mixin respond-to($media) {
     @if $media == handhelds {
