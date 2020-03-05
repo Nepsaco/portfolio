@@ -29,35 +29,13 @@ export default {
 
 <style lang='scss'>
 .hexagon {
-    position: relative;
-    width: 45px;
-    height: 25.98px;
-    background-color: $accent;
+    @include hexagon();
     padding-top: 3px;
-
-    &:before, &:after {
-        content: "";
-        position: absolute;
-        border-left: 22.5px solid transparent;
-        border-right: 22.5px solid transparent;
-    }
-
-    &:before {
-        bottom: 100%;
-        border-bottom: 12.99px solid $accent;
-    }
-
-    &:after {
-        top: 100%;
-        width: 0;
-        border-top: 12.99px solid $accent;
-
-    }
 
     #hamburger-container {
         position: relative;
         margin: auto;
-        width: 30px;
+        width: 22px;
         height: 20px;
 
         span {
@@ -104,24 +82,24 @@ export default {
                 }
 
                 &:nth-child(1) {
-                    top: 4px;
+                    top: 5px;
                     left: 3px;
                 }
 
                 &:nth-child(2) {
-                    top: 4px;
+                    top: 5px;
                     left: calc(50% - 3px);
                 }
 
 
                 &:nth-child(5) {
                     left: 3px;
-                    top: 14px;
+                    top: 12px;
                 }
 
                 &:nth-child(6) {
                     left: calc(50% - 3px);
-                    top: 14px;
+                    top: 12px;
                 }
 
                 &:nth-child(3){
