@@ -5,7 +5,9 @@ import Landing from '@/views/Landing'
 import About from '@/views/About'
 import Work from '@/views/Work'
 import Contact from '@/views/Contact'
+import Projects from '@/views/Projects'
 
+import SkiTheStreets from '@/components/SkiTheStreets'
 Vue.use(VueRouter)
 
 const routes = [
@@ -18,12 +20,16 @@ const routes = [
             Work,
             Contact,
         }
+    },{
+        path: '/projects',
+        name: 'projects',
+        component: Projects,
+        children: [{
+            path: 'skithestreets',
+            component: SkiTheStreets
+        },]
     }
     // ,{
-    //     path: '/about',
-    //     name: 'about',
-    //     component: About,
-    // },{
     //     path: '/work',
     //     name: 'work',
     //     component: Work,

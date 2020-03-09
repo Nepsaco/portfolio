@@ -4,6 +4,7 @@
             <h1>Work</h1>
         </div>
         <div class='work-content'>
+            <router-view />
         </div>
     </section>
 </template>
