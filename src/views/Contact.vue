@@ -10,7 +10,11 @@
             <p>Software Engineer</p>
             <EmailForm @send-email='sendEmail'/>
             <div class='social-container'>
-                <a href='#'>LinkedIn</a>
+                <a href='https://www.linkedin.com/in/tobietsuzuki/' target='_blank'>
+                    <font-awesome-icon :icon="['fab', 'linkedin-in']" size='3x'/> 
+                    <font-awesome-icon :icon="['fab', 'github']" size='3x'/> 
+                    <font-awesome-icon :icon="['fab', 'medium-m']" size='3x'/> 
+                </a>
             </div>
         </div>
     </section>
@@ -78,6 +82,10 @@ export default {
     @include respond-to(desktop){
         background-color: $light;
         width: 50vw
+    }
+
+    a {
+        color: $dark;
     }
 }
 </style>
