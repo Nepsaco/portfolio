@@ -4,12 +4,12 @@
             <p v-show='!email.valid'>Please enter a valid email address.</p>
         </div>
         <label for='name'>Name</label>
-        <input id='name' name='name' type='text' v-model='name' required/>
+        <input class='small-input' id='name' name='name' type='text' v-model='name' required/>
         <label for='email'>Email</label>
-        <input id='email' name='email' type='email' v-model='email.value' required/>
+        <input class='small-input' id='email' name='email' type='text' v-model='email.value' required/>
         <label for='message'>Message</label>
-        <input id='message' name='message' type='textarea' v-model='message.text' required/>
-        <input type='submit' value='Send' />
+        <textarea class='large-input' id='message' name='message' type='textarea' v-model='message.text' required></textarea>
+        <input class='button' type='submit' value='Send' />
     </form>
 </template>
 
@@ -58,4 +58,59 @@ export default {
 </script>
 
 <style lang='scss'>
+.email-form {
+    display: flex;
+    flex-direction: column;
+    @include bold-font;
+
+    input, textarea {
+        font-size: 1rem;
+        padding: .5rem;
+        margin-bottom: 1.5rem;
+        border: 1px solid $grey;
+        border-radius: 30px;
+        box-shadow: 2px 2px 8px $grey;
+        &:focus {
+            outline: none;
+            box-shadow: 2px 2px 16px $dark;
+        }
+        
+    }
+
+    .small-input {
+        padding: .5rem 1rem .5rem 1rem;
+    }
+
+    .large-input {
+        padding-left: 1rem;
+        border-radius: 15px;
+        min-height: 128px;
+        overflow: auto;
+    }
+    
+    .button {
+        font-size: 1rem;
+        border: none;
+        align-self: center;
+        width: 40%;
+        color: $light;
+        background-color: $accent;
+        @include respond-to(desktop){
+            width: 25%;
+        }
+
+        &:focus {
+            box-shadow: 2px 2px 8px $grey;
+        }
+
+        &:hover {
+            box-shadow: 2px 2px 8px $dark;
+        }
+        
+        &:active {
+            box-shadow: 2px 2px 4px $dark;
+        }
+    }
+
+}
 </style>

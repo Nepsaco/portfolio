@@ -12,7 +12,11 @@
             <div class='social-container'>
                 <a href='https://www.linkedin.com/in/tobietsuzuki/' target='_blank'>
                     <font-awesome-icon :icon="['fab', 'linkedin-in']" size='3x'/> 
+                </a>
+                <a href='https://www.github.com/nepsaco' target='_blank'>
                     <font-awesome-icon :icon="['fab', 'github']" size='3x'/> 
+                </a>
+                <a href='https://www.medium.com/@tobietsuzuki' target='_blank'>
                     <font-awesome-icon :icon="['fab', 'medium-m']" size='3x'/> 
                 </a>
             </div>
@@ -84,8 +88,13 @@ export default {
         width: 50vw
     }
 
-    a {
-        color: $dark;
+    .social-container {
+        display: flex;
+        justify-content: space-evenly;
+        a {
+            color: $dark;
+
+        }
     }
 }
 </style>
