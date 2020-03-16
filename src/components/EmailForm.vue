@@ -84,7 +84,7 @@ export default {
     .large-input {
         padding-left: 1rem;
         border-radius: 15px;
-        min-height: 128px;
+        min-height: 100px;
         overflow: auto;
     }
     

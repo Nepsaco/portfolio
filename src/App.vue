@@ -1,13 +1,27 @@
 <template>
     <div id="app">
-        <router-view name='Landing' ref='landing'/> 
-            <router-view name='About' ref='about'/> 
-                <router-view name='Work' ref='work'/> 
-                    <router-view name='Contact' ref='contact'/> 
+        <Landing />
+        <About />
+        <Work />
+        <Contact />
     </div>
 </template>
 
 <script>
+import Landing from '@/views/Landing'
+import About from '@/views/About'
+import Work from '@/views/Work'
+import Contact from '@/views/Contact'
+
+export default{
+
+    components: {
+        Landing,
+        About,
+        Work,
+        Contact,
+    }
+}
 </script>
 
 <style lang="scss">

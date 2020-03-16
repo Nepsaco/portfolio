@@ -6,8 +6,6 @@
         <div class='contact-content'>
             <h3>If you are looking to collaborate and create amazing experiences - you are welcome to contact me.</h3>
             <p>I am available for full-time and freelance projects.</p>
-            <h2>Tobie Tsuzuki</h2>
-            <p>Software Engineer</p>
             <EmailForm @send-email='sendEmail'/>
             <div class='social-container'>
                 <a href='https://www.linkedin.com/in/tobietsuzuki/' target='_blank'>
@@ -78,9 +76,6 @@ export default {
     h2 {
         @include bold-font;
         font-size: 1.5rem;
-    }
-
-    h3 {
     }
 
     @include respond-to(desktop){
