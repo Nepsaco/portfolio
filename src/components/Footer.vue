@@ -1,8 +1,10 @@
 <template>
         <footer class='main-footer'>
             <ul>
-                <li>about</li>/
-                <li>work</li>/
+                <li>about</li>
+                <span>/</span>
+                <li>work</li>
+                <span>/</span>
                 <li>contact</li>
             </ul>
         </footer>
