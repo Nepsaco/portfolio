@@ -3,18 +3,11 @@
         <div class='work-title'>
             <h1>Work</h1>
         </div>
-        <Projects />
+        <router-view />
     </section>
 </template>
 
 <script>
-import Projects from '@/views/Projects'
-
-export default {
-    components: {
-        Projects,
-    }
-}
 </script>
 
 <style lang='scss'>

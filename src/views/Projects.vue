@@ -6,6 +6,7 @@
             <router-link :to="{name: 'brew-time'}">Brew Time</router-link>
             <span>/</span>
             <router-link :to="{name: 'ski-the-streets'}">Ski The Streets</router-link>
+            <router-view />
         </nav>
     </div>
 </template>
