@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Projects from '@/views/Projects'
-import SkiTheStreets from '@/views/SkiTheStreets'
+import Project from '@/components/Project'
 Vue.use(VueRouter)
 
 const routes = [{
@@ -13,9 +13,9 @@ const routes = [{
     name: 'projects',
     component: Projects,
 },{
-    path: '/ski-the-streets',
-    name: 'ski-the-streets',
-    component: SkiTheStreets,
+    path: '/:name',
+    name: 'project',
+    component: Project,
 }] 
 
 
