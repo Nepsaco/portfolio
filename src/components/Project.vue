@@ -1,22 +1,28 @@
 <template>
     <div class='project-content'>
-        <h1>Ski The Streets</h1>
-        <p>Lorem Ipsm</p>
-        <img src='../assets/images/ski.svg' alt='Project image' />
-        <p></p>
+        <h1>{{$attrs.name}}</h1>
+        <p>{{$attrs.description}}</p>
+        <img :src='$attrs.img' alt='Project image' />
+        <p>{{$attrs.techDescription}}</p>
         <h2>Technolgies</h2>
         <ul>
+            <div v-for='(tech, index) in $attrs.techstack' :key='index'>
+                <li> {{tech}}</li>
+            </div>
         </ul>
         <div class='social-container'>
-            <a href='https://www.linkedin.com/in/tobietsuzuki/' target='_blank'>
+            <a :href='$attrs.youtube' target='_blank'>
                 <font-awesome-icon :icon="['fab', 'youtube']" size='3x'/> 
             </a>
-            <a href='https://www.github.com/nepsaco' target='_blank'>
+            <a :href='$attrs.github' target='_blank'>
                 <font-awesome-icon :icon="['fab', 'github']" size='3x'/> 
             </a>
         </div>
     </div>
 </template>
+
+<script>
+</script>
 
 <style lang='scss'>
 .project-content{
@@ -37,14 +43,22 @@
         @include bold-font;
     }
 
+    p{
+        line-height: 1.5rem;
+    }
+
     img {
         width: 100vw;
         margin-left: -2rem;
+        display: none;
     }
 
     @include respond-to(desktop){
-        background-color: $light;
-        width: 50vw
+        width: 50vw;
+        img {
+            display: inherit;
+            width: 50vw;
+        }
     }
     .social-container {
         display: flex;

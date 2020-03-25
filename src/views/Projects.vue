@@ -1,17 +1,9 @@
 <template>
     <div class='project-container'>
         <nav class='project-nav'>
-            <div v-for='project in projectList'>
-                <router-link :to="{name: {{project.params}}''}">Badges</router-link>
-                <span>/</span>
+            <div v-for='project in projectList' :key="project.name">
+                <router-link :to="{name: 'project', params: project}" :name='project.params'>{{project.name}}</router-link>
             </div>
-
-            <router-link :to="{name: 'badges'}">Badges</router-link>
-            <span>/</span>
-            <router-link :to="{name: 'brew-time'}">Brew Time</router-link>
-            <span>/</span>
-            <router-link :to="{name: 'ski-the-streets'}">Ski The Streets</router-link>
-            <router-view />
         </nav>
     </div>
 </template>
