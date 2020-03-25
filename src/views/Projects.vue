@@ -1,6 +1,11 @@
 <template>
     <div class='project-container'>
         <nav class='project-nav'>
+            <div v-for='project in projectList'>
+                <router-link :to="{name: {{project.params}}''}">Badges</router-link>
+                <span>/</span>
+            </div>
+
             <router-link :to="{name: 'badges'}">Badges</router-link>
             <span>/</span>
             <router-link :to="{name: 'brew-time'}">Brew Time</router-link>
@@ -10,6 +15,16 @@
         </nav>
     </div>
 </template>
+
+<script>
+export default {
+    computed: {
+        projectList() {
+            return this.$store.state.projectList
+        } 
+    }
+}
+</script>
 
 <style lang='scss'>
 .project-container {

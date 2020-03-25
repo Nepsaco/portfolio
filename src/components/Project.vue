@@ -3,6 +3,7 @@
         <h1>Ski The Streets</h1>
         <p>Lorem Ipsm</p>
         <img src='../assets/images/ski.svg' alt='Project image' />
+        <p></p>
         <h2>Technolgies</h2>
         <ul>
         </ul>
