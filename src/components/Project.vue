@@ -1,6 +1,14 @@
 <template>
     <div class='project-content'>
-        <h1>{{$attrs.name}}</h1>
+        <div class='header'>
+            <h1>{{$attrs.name}}</h1>
+            <div class='back-button'>
+                <router-link :to="{name: 'projects'}">
+                    <span></span>
+                    <span></span>
+                </router-link>
+            </div>
+        </div>
         <p>{{$attrs.description}}</p>
         <img :src='$attrs.img' alt='Project image' />
         <p>{{$attrs.techDescription}}</p>
@@ -43,13 +51,11 @@
         @include bold-font;
     }
 
-    p{
+    p {
         line-height: 1.5rem;
     }
 
     img {
-        width: 100vw;
-        margin-left: -2rem;
         display: none;
     }
 
@@ -57,7 +63,7 @@
         width: 50vw;
         img {
             display: inherit;
-            width: 50vw;
+            width: 100%;
         }
     }
     .social-container {
@@ -66,6 +72,32 @@
         a {
             color: $dark;
 
+        }
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        .back-button {
+            @include hexagon();
+            span {
+                display: block;
+                position: absolute;
+                top: 11px;
+                left: 11px;
+                width: 50%;
+                height: 4px;
+                margin: 0 auto;
+                background: $light;
+                opacity: 1;
+                border-radius: 0 10px 10px 0;
+                &:nth-child(1){
+                    transform: rotate(-45deg);
+                }
+                &:nth-child(2){
+                    transform: rotate(45deg);
+                }
+            }
         }
     }
 }

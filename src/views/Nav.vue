@@ -17,6 +17,7 @@ export default {
 <style lang='scss'>
 
 .main-nav {
+    display: none;
     position: fixed;
     left: 2rem;
     top: 2rem;

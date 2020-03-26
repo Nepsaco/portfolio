@@ -1,5 +1,5 @@
 <template>
-    <section class='landing'>
+    <section class='landing' id='landing'>
         <Header />
         <main class='main-content'>
             <h1>Tobie Tsuzuki</h1>

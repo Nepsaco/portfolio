@@ -1,11 +1,11 @@
 <template>
         <footer class='main-footer'>
             <ul>
-                <li>about</li>
+                <router-link to='#about'>about</router-link>
                 <span>/</span>
-                <li>work</li>
+                <router-link to='#work'>work</router-link>
                 <span>/</span>
-                <li>contact</li>
+                <router-link to='#contact'>contact</router-link>
             </ul>
         </footer>
 </template>
@@ -26,6 +26,10 @@
         width: 100vw;
         @include respond-to(desktop){
             width: 40vw;
+        }
+        a {
+         color: $accent;   
+         text-decoration: none;
         }
     }
 }
