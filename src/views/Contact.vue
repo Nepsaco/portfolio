@@ -4,9 +4,16 @@
             <h1>Contact</h1>
         </div>
         <div class='contact-content'>
-            <h3>If you are looking to collaborate and create amazing experiences - you are welcome to contact me.</h3>
-            <p>I am available for full-time and freelance projects.</p>
-            <EmailForm @send-email='sendEmail'/>
+            <div>
+                <h3>If you are looking to collaborate and create amazing experiences feel free to contact me.</h3>
+                <p>I am available for full-time and freelance projects.</p>
+            </div>
+            <div class='my-links'>
+                <h3>Tobie Tsuzuki</h3>
+                <p>Software Developer</p>
+                <a href='mailto:tobie.tsuzuki@gmail.com'>tobie.tsuzuki@gmail.com</a><br>
+                <a href ='./Resume - Tobie Tsuzuki.pdf' target='_blank'>Resume</a>
+            </div>
             <div class='social-container'>
                 <a href='https://www.linkedin.com/in/tobietsuzuki/' target='_blank'>
                     <font-awesome-icon :icon="['fab', 'linkedin-in']" size='3x'/> 
@@ -18,6 +25,7 @@
                     <font-awesome-icon :icon="['fab', 'medium-m']" size='3x'/> 
                 </a>
             </div>
+            <EmailForm @send-email='sendEmail'/>
         </div>
     </section>
 </template>
@@ -33,7 +41,8 @@ export default {
     methods: {
         sendEmail(message){
             console.log(message)
-        }
+        },
+
     }
 }
 </script>
@@ -73,9 +82,9 @@ export default {
     color: $dark;
     line-height: 1.5rem;
 
-    h2 {
+    h3 {
         @include bold-font;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
 
     @include respond-to(desktop){
@@ -83,12 +92,18 @@ export default {
         width: 50vw
     }
 
+    .my-links {
+        a {
+            color: $accent;
+            text-decoration: none;
+        }
+    }
+
     .social-container {
         display: flex;
         justify-content: space-evenly;
         a {
             color: $dark;
-
         }
     }
 }
