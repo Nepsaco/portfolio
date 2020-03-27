@@ -61,7 +61,7 @@ export default {
                 .then(result => {
                     alert('Email Sent')
                 }, (error) => {
-                    alert('Email Failed Try Again Later')
+                    alert('Email Failed Try Again Later', error)
                 })
         }
     }
