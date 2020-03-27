@@ -60,10 +60,8 @@ export default {
             emailjs.sendForm('gmail', 'template_3vYVK9tc', event.target, 'user_0zHFmyqIrvN8gfyi9Z6uk')
                 .then(result => {
                     alert('Email Sent')
-                    console.log('Success', result.status, result.text)
                 }, (error) => {
                     alert('Email Failed Try Again Later')
-                    console.log('Failed...', error)
                 })
         }
     }

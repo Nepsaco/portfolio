@@ -37,13 +37,6 @@ export default {
     components: {
         EmailForm,
     },
-
-    methods: {
-        sendEmail(message){
-            console.log(message)
-        },
-
-    }
 }
 </script>
 
