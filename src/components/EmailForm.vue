@@ -1,5 +1,5 @@
 <template>
-    <form class='email-form' @submit.prevent='onSubmit' novalidate='true'>
+    <form class='email-form' id='email-form' @submit.prevent='onSubmit' novalidate='true'>
         <div class='error-message'>
             <p v-show='!email.valid'>Please enter a valid email address.</p>
         </div>
@@ -14,6 +14,8 @@
 </template>
 
 <script>
+import emailjs from 'emailjs-com'
+
 export default {
     data() {
         return {
@@ -29,7 +31,7 @@ export default {
     },
 
     methods: {
-        onSubmit(){
+        onSubmit(event){
             this.validate(this.email.value)
 
             if(this.email.valid){
@@ -42,6 +44,7 @@ export default {
                 this.email.value = ''
                 this.message.text = ''
             } 
+            this.sendEmail(event)
         },
 
         validate(input){
@@ -51,9 +54,19 @@ export default {
         isEmail(input){
             const emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
             return emailRegExp.test(input)
+        },
+
+        sendEmail(event){
+            emailjs.sendForm('gmail', 'template_3vYVK9tc', event.target, 'user_0zHFmyqIrvN8gfyi9Z6uk')
+                .then(result => {
+                    alert('Email Sent')
+                    console.log('Success', result.status, result.text)
+                }, (error) => {
+                    alert('Email Failed Try Again Later')
+                    console.log('Failed...', error)
+                })
         }
     }
-
 }
 </script>
 
@@ -74,7 +87,7 @@ export default {
             outline: none;
             box-shadow: 2px 2px 16px $dark;
         }
-        
+
     }
 
     .small-input {
@@ -87,7 +100,7 @@ export default {
         min-height: 100px;
         overflow: auto;
     }
-    
+
     .button {
         font-size: 1rem;
         border: none;
@@ -106,7 +119,7 @@ export default {
         &:hover {
             box-shadow: 2px 2px 8px $dark;
         }
-        
+
         &:active {
             box-shadow: 2px 2px 4px $dark;
         }
