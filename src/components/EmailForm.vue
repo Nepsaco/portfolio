@@ -58,7 +58,7 @@ export default {
 
         sendEmail(event){
             emailjs.sendForm('gmail', 'template_3vYVK9tc', event.target, 'user_0zHFmyqIrvN8gfyi9Z6uk')
-                .then(result => {
+                .then(() => {
                     alert('Email Sent')
                 }, (error) => {
                     alert('Email Failed Try Again Later', error)
