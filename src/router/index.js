@@ -9,7 +9,7 @@ const routes = [{
     name: 'projects',
     component: Projects,
 },{
-    path: '/projects/:name',
+    path: '/:name',
     name: 'project',
     component: Project,
     props: true,
