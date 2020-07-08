@@ -1,4 +1,5 @@
 <template>
+
     <section class='contact' id='contact'>
         <div class='contact-title'>
             <h1>Contact</h1>
@@ -63,7 +64,6 @@ export default {
         font-size: 10vw;
     }
 }
-
 
 .contact-content {
     display: flex;
