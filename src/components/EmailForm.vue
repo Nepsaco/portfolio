@@ -22,7 +22,7 @@ export default {
       name: '',
       email: {
         value: '',
-        valid: false,
+        valid: true,
       },
       message: {
         text: '',
@@ -34,7 +34,7 @@ export default {
     onSubmit(event){
       this.validate(this.email.value)
 
-      if(this.email.valid){
+      if(this.email.valid && this.email.value){
         this.$emit('send-email', {
           name: this.name,
           email: this.email.value,

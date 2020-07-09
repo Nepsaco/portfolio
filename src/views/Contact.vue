@@ -9,13 +9,10 @@
                 <h3>If you are looking to collaborate and create amazing experiences feel free to contact me.</h3>
                 <p>I am available for full-time and freelance projects.</p>
             </div>
-            <div class='my-links'>
-                <h3>Tobie Tsuzuki</h3>
-                <p>Software Developer</p>
-                <a href='mailto:tobie.tsuzuki@gmail.com'>tobie.tsuzuki@gmail.com</a><br>
-                <a href ='./Resume - Tobie Tsuzuki.pdf' target='_blank'>Resume</a>
-            </div>
             <div class='social-container'>
+                <a href='mailto:tobie.tsuzuki@gmail.com' target='_blank'>
+                    <font-awesome-icon :icon="['fa', 'envelope']" size='3x'/> 
+                </a>
                 <a href='https://www.linkedin.com/in/tobietsuzuki/' target='_blank'>
                     <font-awesome-icon :icon="['fab', 'linkedin-in']" size='3x'/> 
                 </a>
@@ -25,8 +22,11 @@
                 <a href='https://www.medium.com/@tobietsuzuki' target='_blank'>
                     <font-awesome-icon :icon="['fab', 'medium-m']" size='3x'/> 
                 </a>
+                <a href='./Resume - Tobie Tsuzuki.pdf' target='_blank'>
+                    <font-awesome-icon :icon="['fa', 'id-card']" size='3x'/> 
+                </a>
             </div>
-            <EmailForm @send-email='sendEmail'/>
+            <EmailForm />
         </div>
     </section>
 </template>
@@ -68,12 +68,13 @@ export default {
 .contact-content {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     background-color: $light;
     height: 100vh;
     padding: 2rem;
+    padding-bottom: 1rem;
     color: $dark;
-    line-height: 1.5rem;
+    line-height: 1.75rem;
 
     h3 {
         @include bold-font;
@@ -83,13 +84,6 @@ export default {
     @include respond-to(desktop){
         background-color: $light;
         width: 50vw
-    }
-
-    .my-links {
-        a {
-            color: $accent;
-            text-decoration: none;
-        }
     }
 
     .social-container {
