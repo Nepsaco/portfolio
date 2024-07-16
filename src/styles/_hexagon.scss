@@ -1,26 +1,25 @@
-@mixin hexagon ($shortDiagonal: 45px, $side: 25.98px, $incircleRadius: 22.5px) {
-    position: relative;
-    width: $shortDiagonal;
-    height: $side;
-    background-color: $accent;
+@mixin hexagon($shortDiagonal: 45px, $side: 25.98px, $incircleRadius: 22.5px) {
+  position: relative;
+  width: $shortDiagonal;
+  height: $side;
+  background-color: $accent;
 
-    &:before, &:after {
-        content: "";
-        position: absolute;
-        border-left: $incircleRadius solid transparent;
-        border-right: $incircleRadius solid transparent;
-    }
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    border-left: $incircleRadius solid transparent;
+    border-right: $incircleRadius solid transparent;
+  }
 
-    &:before {
-        bottom: 100%;
-        border-bottom: $side/2 solid $accent;
-    }
+  &:before {
+    bottom: 100%;
+    border-bottom: $side/2 solid $accent;
+  }
 
-    &:after {
-        top: 100%;
-        width: 0;
-        border-top: $side/2 solid $accent;
-
-    }
-    
+  &:after {
+    top: 100%;
+    width: 0;
+    border-top: $side/2 solid $accent;
+  }
 }

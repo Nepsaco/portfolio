@@ -2,10 +2,13 @@ $break-handheld: 480px;
 $break-desktop: 1080px;
 
 @mixin respond-to($media) {
-    @if $media == handhelds {
-        @media only screen and (max-width: $break-handheld){ @content; }
+  @if $media ==handhelds {
+    @media only screen and (max-width: $break-handheld) {
+      @content;
     }
-    @else if $media == desktop {
-        @media only screen and (min-width: $break-desktop){ @content; }
+  } @else if $media ==desktop {
+    @media only screen and (min-width: $break-desktop) {
+      @content;
     }
+  }
 }

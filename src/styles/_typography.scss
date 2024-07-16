@@ -1,41 +1,42 @@
 @import url("https://use.typekit.net/ydq0zca.css");
+
 @font-face {
-    font-family: 'Mistuki';
-    src: url('~@/assets/fonts/Mistuki.ttf')format('truetype');
+  font-family: "Mistuki";
+  src: url("@/assets/fonts/Mistuki.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: 'Mistuki-bold';
-    src: url('~@/assets/fonts/Mistuki-Bold.ttf')format('truetype');
+  font-family: "Mistuki-bold";
+  src: url("@/assets/fonts/Mistuki-Bold.ttf") format("truetype");
 }
 
 @mixin header-font {
-    font-family: 'Mistuki', 'Arial Black', sans-serif;
-    font-size: 20vw;
+  font-family: "Mistuki", "Arial Black", sans-serif;
+  font-size: 20vw;
 }
 
 @mixin bold-font {
-    font-family: proxima-nova, sans-serif;
-    font-weight: 700;
-    font-style: normal;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 @mixin regular-font {
-    font-family: proxima-nova, sans-serif;
-    font-weight: 400;
-    font-style: normal;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 @mixin light-font {
-    font-family: proxima-nova, sans-serif;
-    font-weight: 300;
-    font-style: normal;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
 @mixin medium-font {
-    font-family: proxima-nova, sans-serif;
-    font-weight: 500;
-    font-style: normal;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
 $XXS: 4px;
