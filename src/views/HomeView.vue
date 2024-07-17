@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import HeaderComponent from "@/components/HeaderComponent.vue";
+import FooterComponent from "@/components/FooterComponent.vue";
 </script>
 
 <template>
@@ -12,15 +13,16 @@ import HeaderComponent from "@/components/HeaderComponent.vue";
         <div class="text-slider">
           <span>Software Developer.</span>
           <span>Skier.</span>
+          <span>Frontend Engineer.</span>
+          <span>Brewer.</span>
           <span>Designer.</span>
           <span>Climber.</span>
-          <span>Front-end Engineer.</span>
-          <span>Tech Nerd.</span>
-          <span>Back-end Engineer.</span>
-          <span>Foodie.</span>
+          <span>Backend Engineer.</span>
+          <span>Chef.</span>
         </div>
       </h2>
     </main>
+    <FooterComponent />
   </section>
 </template>
 

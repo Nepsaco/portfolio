@@ -26,8 +26,8 @@ const toggleActive = () => {
 
 <style scoped lang="scss">
 .hexagon {
-  @include hexagon();
   padding-top: 3px;
+  @include hexagon();
 
   .hamburger-container {
     position: relative;

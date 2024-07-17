@@ -4,7 +4,6 @@ import Nav from "@/components/NavComponent.vue";
 
 <template>
   <header class="main-header">
-    <h1>Software Developer</h1>
     <Nav />
   </header>
 </template>

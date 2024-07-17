@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @mixin hexagon($shortDiagonal: 45px, $side: 25.98px, $incircleRadius: 22.5px) {
   position: relative;
   width: $shortDiagonal;
@@ -14,12 +16,12 @@
 
   &:before {
     bottom: 100%;
-    border-bottom: $side/2 solid $accent;
+    border-bottom: math.div($side, 2) solid $accent;
   }
 
   &:after {
     top: 100%;
     width: 0;
-    border-top: $side/2 solid $accent;
+    border-top: math.div($side, 2) solid $accent;
   }
 }
