@@ -19,12 +19,15 @@
             </div>
         </ul>
         <div class='social-container'>
-            <a :href='$attrs.youtube' target='_blank'>
-                <font-awesome-icon :icon="['fab', 'youtube']" size='3x'/> 
-            </a>
-            <a :href='$attrs.github' target='_blank'>
-                <font-awesome-icon :icon="['fab', 'github']" size='3x'/> 
-            </a>
+          <a v-for='(link, index) in $attrs.demoLinks' :key='index' :href='link.url' target='_blank'>
+            <font-awesome-icon :icon='link.icon' size='3x'/> 
+          </a>
+            <!-- <a :href='$attrs.youtube' target='_blank'> -->
+            <!--     <font-awesome-icon :icon="['fab', 'youtube']" size='3x'/> --> 
+            <!-- </a> -->
+            <!-- <a :href='$attrs.github' target='_blank'> -->
+            <!--     <font-awesome-icon :icon="['fab', 'github']" size='3x'/> --> 
+            <!-- </a> -->
         </div>
     </div>
 </template>
@@ -41,6 +44,7 @@
     height: 100vh;
     color: $dark;
     padding: 2rem;
+    overflow: scroll;
 
     h1 {
         @include header-font;
