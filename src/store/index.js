@@ -34,7 +34,7 @@ export default new Vuex.Store({
       params: 'code-crown',
       description: 'A mobile game built to deepen beginner programing concepts',
       techDescription: 'A mobile app built using React Native to create a interactive gaming experience. Utilizes device motion and screen orientaion to give positional feedback. Features gesture response, dynamic routing, and loding splash screen for optimal user experience.',
-      // img: require('@/assets/images/CodeCrown.png'),
+      img: require('@/assets/images/CodeCrown.png'),
       techstack: ['React Native', 'Expo', 'Ruby On Rails', 'Heroku'],
       demoLinks: [{url: 'https://github.com/Nepsaco/CodeCrown', icon: ['fab', 'github']}]
     }]

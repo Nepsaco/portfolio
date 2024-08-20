@@ -44,6 +44,7 @@
     height: 100vh;
     color: $dark;
     padding: 2rem;
+    overflow: scroll;
 
     h1 {
         @include header-font;
